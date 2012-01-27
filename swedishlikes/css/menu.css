@@ -1,0 +1,90 @@
+/* 
+    Document   : menu
+    Created on : 2012-jan-23, 19:46:57
+    Author     : Sam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#page_menu{
+    margin: 0 auto 5px auto;
+    clear: both;
+    
+}
+.clear{	
+    clear: both;
+    overflow: hidden;
+    height: 0;
+}
+
+#all{	
+    width: 65%;
+    margin: 0 auto 120px auto;
+    background: #006699;
+}
+
+
+a{
+    color: #324143;
+}
+
+a:hover{
+    color: #7B8D3B;
+}
+
+#jsddm{	
+    margin: 0 auto 5px auto;
+    clear: both;
+    padding: 0;
+}
+
+#jsddm li{
+    float: left;
+    list-style: none;
+    font: 12px Tahoma, Arial;
+}
+
+#jsddm li a{	
+    display: block;
+    background-color:#3b3c3b;   
+    color: white;
+    margin: 0 0 0 5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    white-space: nowrap;
+    width: 100px;
+    height: 20px;
+    font-size: 14px;
+}
+
+#jsddm li a:hover{
+    color:#ff0000;
+    background-color: black;
+    border: 2px solid #ff0000;
+}
+
+#jsddm li ul{	
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+}
+
+#jsddm li ul li{
+    float: none;
+    display: inline;   
+}
+
+#jsddm li ul li a{
+    width: auto;
+    background: #A9C251;
+    color: #24313C;
+}
+
+#jsddm li ul li a:hover{	
+    background: black;
+}

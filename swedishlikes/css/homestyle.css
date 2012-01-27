@@ -1,0 +1,345 @@
+/*********************************************************** 
+*    Document   :   homestyle.css
+*    Created on :   2011-dec-13, 23:48:18
+*    Author     :   Sam Almendwi
+*    Description:   Styling the login.php (the members site).     
+************************************************************/
+
+body{
+    background-color: #c8c8fa;    
+    color: #ccffcc;
+}
+
+body a:hover{
+    cursor: pointer;
+}
+
+#header{
+    width: 960px;
+    height: 180px;
+    color: #ffff3e;
+    background-color: #006699;
+    position: relative;
+    margin: 10px auto 10px 25%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#site_title{
+    margin: 5px 0 5px 10px;
+    width: 300px;
+    color: #ffff3e;
+}
+
+#site_title a{
+    text-decoration: none;
+    color: #ffff3e;
+}
+
+#site_title a:hover{
+    color: #ccccff;
+}
+
+#login_system{
+    width: 100px;
+    float: right;
+    margin: 5px 10px 5px 0; 
+    font-size: 14px;
+}
+
+
+#login_system p{
+    text-align: right;
+}
+
+#login_system input{
+    float: right;
+    width: 100px;
+    border: 2px solid #000099;
+    border-radius: 5px; 
+    text-align: center;
+    background-color: #ccccff;
+    color: #000099;    
+}
+
+#user_name{
+    width: 100px;
+    float: right;
+    color: #cccccc;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#logout{
+    width: 100px;
+    float: right;    
+}
+
+#login_system a{
+    color: yellow;
+    font-size: 16px;
+    text-decoration: none;    
+}
+
+#login_system a:hover{
+    color: #ccccff;
+}
+
+#register_area{
+    width: 100px;
+    float: right;  
+}
+
+#register_area p{
+    margin: 5px 2px 2px 2px;
+}
+
+#register_area a{
+    color: yellow;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#register_area a:hover{
+    color: #ccccff;
+}
+
+#menu_div ul>li{
+    list-style: none;
+    display: inline;
+}
+
+#page_menu a:hover{
+    cursor: pointer;
+}
+
+#wrapper{
+    width: 960px;
+    height: 1080px;
+    color: #ffff3e;
+    background-color: #006699;    
+    position: relative; 
+    margin: 10px auto 10px 25%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#content{
+    width: 800px;     
+    position: relative;
+    margin: 50px 0 25px 20px;
+    overflow: hidden; 
+    list-style: none;
+}
+
+#article_form{
+    width: 450px;
+    border-radius: 10px; 
+    text-align: center;
+    background-color: #ccccff;
+    opacity: 0,6;
+    color: #000099;
+    margin: 25px auto 50px auto;
+    clear: both;
+    padding: 50px 50 50px 50px;
+    overflow: hidden;
+}
+
+#article_insert_form button{
+    width: 80px;
+    height: 25px;
+    background-color:#3b3c3b;   
+    color: white;
+    margin: 10px 10px 5px 10px;
+    text-decoration: none;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    float: right;  
+    font-size: 14px;
+}
+
+#article_insert_form button:hover{
+    color:#ff0000;
+    background-color: black;
+    border: 2px solid #ff0000;  
+}
+
+#update_form{
+    width: 600px;
+    height: auto;
+    border-radius: 10px; 
+    text-align: center;
+    background-color: #ccccff;
+    opacity: 0,6;
+    color: #000099;
+    margin: 25px auto 50px auto;
+    clear: both;
+    padding: 50px 50 50px 50px;
+    overflow: hidden;
+}
+
+#profile_update{
+  background-color:#3b3c3b;   
+  color: white;
+  margin: 5px auto 0 auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  width: 250px;
+  font-size: 26px;
+  clear: both;
+}
+
+#update_form p{
+    margin: 20px auto 20px auto;
+    color: black;
+}
+
+#update_form input{
+    width: 250px;
+    height: 20px;
+    display: block;
+    margin: 0 auto 5px auto;
+    clear: both;
+}
+
+#update_form p{
+    clear: both; 
+    margin: 20px auto 0 auto;
+    font-size: 20px;
+}
+
+#update_form button{
+    width: 80px;
+    height: 25px;
+    background-color:#3b3c3b;   
+    color: white;
+    margin: 10px 10px 5px 10px;
+    text-decoration: none;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    float: right;  
+    font-size: 14px;
+}
+
+#update_form button:hover{
+    color:#ff0000;
+    background-color: black;
+    border: 2px solid #ff0000;  
+}
+
+#register_link:hover{
+    cursor: pointer;
+}
+
+#back{
+    float: left;
+    margin: 10px 10px 10px 10px;
+    color: #3b3c3b;
+    
+}
+
+#back a:hover{
+    color: #cc0000; 
+}
+
+.articles {     
+    padding: 0;
+    margin-left: 20px;
+}
+
+#content .likes{
+  background-color:#3b3c3b;   
+  color: white;
+  margin: 0 0 0 5px;
+  text-decoration: none;
+  padding: 1px 5px 1px 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+#content a:hover {
+    color:#ff0000;
+    background-color: black;
+    border: 2px solid #ff0000;
+    cursor: pointer;
+}
+
+#content .articleTitle{
+    color: #ffff3e;
+    font: 24px "Times new roman", sans-serif;    
+}
+
+.likesamount{
+    color: white;
+    margin: 5px 5px 5px 5px;
+}
+
+/*Pagination*/
+
+#pagingControls{
+    float: right;
+    color: #000099;
+    margin: 8px 8px 5px 5px;
+}
+
+#pagingControls ul{
+    display: inline;
+    padding-left: 0.5em;
+}
+
+#pagingControls li{
+    display: inline;
+    padding: 0 0.2em;
+    background-color: white;   
+    color: #999900;
+    text-decoration: none;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#pagingControls li>a{
+    color: black; 
+}
+
+#pagingControls li>a:hover{
+    color: red;    
+}
+
+hr{
+    clear: both;
+}
+
+#footer{
+    width: 960px;
+    height: 150px;
+    color: #ffff3e;
+    background-color: #006699;
+    position: relative;
+    margin: 10px auto 10px 25%;
+    overflow: hidden;
+    border-radius: 15px;
+    opacity: 0.6;
+}
+
+#statistics{
+    float: right;
+    width: 160px;
+}
+
+
+#statistics p{
+    float: right;
+    margin: 8px 8px 5px auto; 
+    font-size: 14px;
+}
+
+#footer_info a{
+    color: #ffff3e;
+}
+
+#footer_info a:hover{
+    color: white;
+}

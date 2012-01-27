@@ -1,0 +1,7 @@
+-PHP validation.
+-JS validation.
+-register css.
+-lägg till article.
+-lägg till innehåll i login.php.
+-kolla ajax på de sidor efter den första.
+-Anpassning vid zoom...stannar i mitten.
