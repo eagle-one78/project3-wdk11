@@ -43,18 +43,16 @@
                         <p><a id="pass_reminder" href="#">Glömt lösen?</a></p>
                         <div id="login_check"> <!-- ändra css!!-->
                                 <?php 
-                                    if ($user->get_session()){
-                                    header("location:login.php");
+                                    if ($user->get_session()) {
+                                        header("location:login.php");
                                     }
-            //                        if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
-                                    if(ISSET($_POST['emailusername'],$_POST['password'])){
+                                    if (ISSET($_POST['emailusername'], $_POST['password'])) {
+                                        
                                         $login = $user->check_login($_POST['emailusername'], $_POST['password']);
-                                        if ($login){
-                                            // Login Success
-                                        header("location:index.php");
-                                        } 
-                                        else {
-                                            // Login Failed
+                                        
+                                        if ($login) {// Login Success
+                                            header("location:index.php");
+                                        } else {// Login Failed                                    
                                             echo '<div id="loginMSG">Invalid login! please try again!</div>';
                                         }
                                     }
@@ -88,7 +86,7 @@
                         <p>Användarnamn</p><input type="text" name="username"  required="true"/>
                         <p>Lösenord</p><input type="password" name="password" required="true"/>
                         <p>Upprepa lösenord</p><input type="password" name="password2" required="true"/>
-                        <p>E-post</p><input type="text" name="email" id="email"  required="true" class="required email"/>
+                        <p>E-post</p><input type="email" name="email" id="email"  required="true" class="required email"/>
                         <p>Webbsida</p><input type="text" name="url" id="url"/>
                         <button id="register_btn" type="submit" name="register_btn" value="Registrera">Registrera</button>
                         <button type="reset" id="reg_reset" name="reset" value="rensa">Stäng</button>

@@ -9,6 +9,7 @@
  ******************************************************************/
     include ('core/init.php');
     $uid = $_SESSION['uid']; 
+    include ('core/func/update_user.php');
 ?>
 
 <!DOCTYPE html>
@@ -94,12 +95,11 @@
                 <div id="update_form">
                     <form method="POST" action="" id="update_form" name="update_form">                    
                         <div id="profile_update">Ändra profil</div> 
-                        <p>Gammalt lösenord</p><input type="password" name="old_password" required="true"/>
-                        <p>Ändra lösenord</p><input type="password" name="password"/>
-                        <p>Upprepa lösenord</p><input type="password" name="password2" required="true"/>
-                        <p>E-post</p><input type="text" name="email" id="email"/>
-                        <p>Upprepa E-post</p><input type="text" name="email2" id="email2"/>
-                        <p>Webbsida</p><input type="text" name="url" id="url"/>
+                        <p>Ändra lösenord</p><input type="password" name="change_password"/>
+                        <p>Upprepa lösenord</p><input type="password" name="change_password2"/>
+                        <p>E-post</p><input type="email" name="change_email" id="email"/>
+                        <p>Upprepa E-post</p><input type="email" name="change_email2" id="email2"/>
+                        <p>Webbsida</p><input type="text" name="change_url" id="url"/>
                         <button id="update_btn" type="submit" name="update_btn" value="Updatera">Spara</button>
                         <button type="reset" id="update_reset" name="reset" value="rensa">Avbryt</button>
                         <div id="back"><a href="index.php">Tillbaka till Medlemssidan</a></div>                  

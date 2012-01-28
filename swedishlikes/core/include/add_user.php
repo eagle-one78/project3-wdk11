@@ -7,7 +7,6 @@
  *      Create and add new user to the database
  **********************************************/
 
-    include_once ('./core/func/user.php');
     
     // Register form-validation and initation of user registeration   
     if(isset($_POST['name'], $_POST['username'], $_POST['password'], $_POST['email'], $_POST['url'])){
@@ -52,7 +51,8 @@
             else{
                 $user->register_user($_POST['name'], $_POST['username'], $_POST['password'], $_POST['email'], $_POST['url']);                                    
                 // Registration Success
-                //echo "success";     //catch by ajax  
+                //echo "success";     //catch by ajax
+                echo "Användare registrerad! <br /> vg. använd inloggnings panelen till vänster för att logga in!";
             }
         }                                                           
     }  

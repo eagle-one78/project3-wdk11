@@ -16,10 +16,11 @@
     $user = new User();       
     
     include ('include/form_validation.php');
-    include ('func/get_articles.php');
-    include ('func/like.php'); 
-    include ('include/add_user.php');
     include ('func/article_function.php');
     include ('include/insert_article.php');
-//    include ('func/user.php');
+    include ('func/get_articles.php');
+    include ('func/like.php');
+    include ('func/user.php');
+    include ('include/add_user.php');
+//    include ('func/update_user.php');
 ?>

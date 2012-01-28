@@ -1,62 +1,26 @@
-<?php
-//inte klar
-
-function update_user($info){//update users information on demand        
+<?php    
+    if(isset($_SESSION['uid'])){
         $uid = $_SESSION['uid'];
         
-        
-        if($info == $_POST['password'] && $_POST['password'] == $_POST['password2']){
-            $password = $_POST['password'];
-            $password = md5($password);
-            mysql_query("UPDATE users SET password = '{$password}' WHERE uid = '{$uid}'");            
+        if(isset($_POST['change_password'], $_POST['change_password2']) && $_POST['change_password'] != $_POST['change_password2']){
+            echo "Lösen 1 och 2 är inte samma, försök igen!";
         }
-        if($info == $_POST['email'] && $_POST['email'] == $_POST['email2']){
-            $email = $_POST['email'];
+        else if(isset($_POST['change_password'], $_POST['change_password2']) && $_POST['change_password'] != "" && $_POST['change_password2'] != "" && $_POST['change_password'] === $_POST['change_password2']){            
+            $password = $_POST['change_password'];
+            $password = md5($password);
+            mysql_query("UPDATE users SET password = '{$password}' WHERE uid = '{$uid}'"); 
+            echo "Lösenord ändrat!";
+        }
+
+        if(isset($_POST['change_email'], $_POST['change_email2']) && $_POST['change_email'] === $_POST['change_email2']){
+            $email = $_POST['change_email'];
             mysql_query("UPDATE users SET email = '{$email}' WHERE uid = '{$uid}'");      
         }
-        
-        if($info == $_POST['url']){
-            $url = $_POST['url'];
-            mysql_query("UPDATE users SET url = '{$url}' WHERE uid = '{$uid}'");      
+
+        if(isset($_POST['change_url']) && $_POST['change_url'] != ""){
+            $url = $_POST['change_url'];
+            mysql_query("UPDATE users SET url = '{$url}' WHERE uid = '{$uid}'");
+            echo "Webbsidans info uppdaterad!";
         }
-        return $info;
-   }
-   
-   if(isset($_SESSION['uid'], $_POST['old_password'], $_POST['password'], $_POST['password2'])){
-       $old_password = $_POST['old_password'];
-       $origin_password = old_pass($origin_password);
-       if ($origin_password === $old_password){
-            update_user($_POST['password']);           
-       }
-   }
-   if(isset($_SESSION['uid'], $_POST['old_password'], $_POST['email'], $_POST['email2'])){
-       $old_password = $_POST['old_password'];
-       $origin_password = old_pass($origin_password);
-       if ($origin_password === $old_password){
-            update_user($_POST['email']);           
-       }
-   }
-   
-   if(isset($_SESSION['uid'], $_POST['old_password'], $_POST['url'])){
-       $old_password = $_POST['old_password'];
-       $origin_password = old_pass($origin_password);
-       if ($origin_password === $old_password){
-            update_user($_POST['url']);           
-       };
-   }   
-   
-    function old_pass($origin_password){
-        $uid = $_SESSION['uid'];        
-        $query= "SELECT password FROM users WHERE uid = '{$uid}'";
-        $result = mysql_query($query) or die (mysql_error());
-        $row = mysql_fetch_assoc($result);
-        $origin_password = $row['password'];      
-        echo $origin_password;
-    }
-    
-//    function uppdate_user($uid,$password,$email, $url){//update users information on demand
-//        $password = md5($password);
-//        $uid = $_SESSION['uid'];
-//        mysql_query("UPDATE users SET password = '{$password}', email = '{$email}', url='{$url}' WHERE uid = {$uid}");
-//    }   
+    }    
 ?>
