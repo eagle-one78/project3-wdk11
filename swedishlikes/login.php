@@ -97,9 +97,9 @@
                         <div id="profile_update">Ändra profil</div> 
                         <p>Ändra lösenord</p><input type="password" name="change_password"/>
                         <p>Upprepa lösenord</p><input type="password" name="change_password2"/>
-                        <p>E-post</p><input type="email" name="change_email" id="email"/>
+                        <p>Ändra e-post</p><input type="email" name="change_email" id="email"/>
                         <p>Upprepa E-post</p><input type="email" name="change_email2" id="email2"/>
-                        <p>Webbsida</p><input type="text" name="change_url" id="url"/>
+                        <p>Ändra webbsida</p><input type="text" name="change_url" id="url"/>
                         <button id="update_btn" type="submit" name="update_btn" value="Updatera">Spara</button>
                         <button type="reset" id="update_reset" name="reset" value="rensa">Avbryt</button>
                         <div id="back"><a href="index.php">Tillbaka till Medlemssidan</a></div>                  
